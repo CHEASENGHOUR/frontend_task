@@ -1,9 +1,7 @@
 <template>
     <div>
         <HeaderActions title="Category" @add="handleAdd" />
-
         <h1 class="text-xl font-bold my-4">Category List</h1>
-
         <div class="grid grid-cols-3 gap-4">
             <template v-for="cat in categories" :key="cat.id">
                 <div v-for="product in cat.products" :key="product.id" class="bg-white p-4 rounded shadow">
@@ -12,7 +10,6 @@
                     <div v-else class="w-full h-32 bg-gray-200 flex items-center justify-center rounded mb-2">
                         <span class="text-gray-500">No Image</span>
                     </div>
-
                     <h2 class="text-lg font-semibold">{{ product.name }}</h2>
                     <p class="text-sm text-gray-500">Category: {{ cat.name }}</p>
                 </div>
